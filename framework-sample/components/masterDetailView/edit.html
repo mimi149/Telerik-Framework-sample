@@ -1,0 +1,64 @@
+<div data-role="view" data-title="Edit" data-model="app.masterDetailView.editItemViewModel" data-bind="events: { show: onShow }" class="edit-item-view" id="masterDetailViewModelEditItemView">
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+            <span data-bind="text: itemData['Text']"></span>
+            <a data-role="backbutton" data-align="left" data-bind="events: { click: onCancel }">Cancel</a>
+            <a data-role="button" data-align="right" data-bind="events: { click: onSaveClick }">Save</a>
+        </div>
+    </header>
+    <!-- START_CUSTOM_CODE_masterDetailViewModel -->
+    <!-- END_CUSTOM_CODE_masterDetailViewModel -->
+    <div id="editableListForm3" class="form-view">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li class="form-content-item">
+
+                    <label>
+
+                        <span>Text field</span>
+
+                        <input id="textField1" data-bind="value: editFormData.textField1" placeholder="Type here ..." type="text">
+
+                    </label>
+
+                </li>
+                <li class="form-content-item">
+                    <label class="km-label-above">
+
+                        <span>Textarea field</span>
+
+                        <textarea rows="7"></textarea>
+                    </label>
+                </li>
+                <li class="form-content-item">
+                    <label>
+
+                        <span>Label</span>
+
+                        <select data-bind="value: editFormData.dropdownlist1" data-role="dropdownlist">
+                            <option value="First Option">First Option</option>
+                            <option value="Second Option">Second Option</option>
+                            <option value="Third Option">Third Option</option>
+                        </select>
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <div class="editableListItem fileUploadListItem">
+
+                        <div>File</div>
+
+                        <div>
+                            <span id="fileUploadName" class="file-upload-name"></span>
+                            <a href="javascript:void(0)" class="link">Pick a file...</a>
+                            <input id="fileUpload" type="file">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </form>
+        <!-- START_CUSTOM_CODE_editableListForm3 -->
+        <!-- END_CUSTOM_CODE_editableListForm3 -->
+    </div>
+</div>

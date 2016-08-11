@@ -4,20 +4,499 @@
     {
       "type": "kendo-ui-mobile:view",
       "name": "home",
-      "components": [],
+      "components": [
+        {
+          "type": "kendo-ui-mobile:authentication",
+          "name": "homeModel",
+          "dataProvider": "jsonDataProvider",
+          "enableRegistration": true,
+          "gotoRegisterLabel": "Register",
+          "registerEmailLabel": "Email",
+          "registerPasswordLabel": "Password",
+          "registerNameLabel": "Name",
+          "registerLabel": "Register",
+          "registerRedirect": "home",
+          "gotoSigninLabel": "Sign In",
+          "enableLogout": true,
+          "logoutLabel": "Sign Out",
+          "enableRememberme": true,
+          "remembermeLabel": "Remember Me",
+          "emailLabel": "Email",
+          "emailPlaceholder": "ex: john@gmail.com",
+          "passwordLabel": "Password",
+          "passwordPlaceholder": "Password must contain at least one uppercase character, at least one lower case character, at least one number. Password doesn't contain any special character.",
+          "signinLabel": "Confirm Password",
+          "signinRedirect": "home"
+        }
+      ],
       "title": "Home View",
       "addToNavigation": true,
       "icon": "home"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "aboutView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:about",
+          "name": "aboutViewModel",
+          "appName": "My App",
+          "appVersion": "Version 1",
+          "appIcon": "20150304_200113.jpg",
+          "appDescription": "App description",
+          "contactButton": true,
+          "contactLabel": "Contact us",
+          "contactMail": "support@example.com",
+          "facebookButton": true,
+          "facebookLabel": "Like us on Facebook",
+          "facebookLink": "https://www.facebook.com/Telerik",
+          "twitterButton": true,
+          "twitterLabel": "Follow us on Twitter",
+          "twitterLink": "https://twitter.com/telerik"
+        }
+      ],
+      "title": "About",
+      "addToNavigation": true,
+      "icon": "info"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "masterDetailView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:editableList",
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
+          "components": [
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "textAreaField",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Textarea field",
+                  "inputType": "textArea",
+                  "wideFieldTitlePosition": "top"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "heading",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Heading",
+                  "inputType": "heading",
+                  "headingSize": "h1"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "shortText",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Short text",
+                  "inputType": "shortText"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "longText",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Long text",
+                  "inputType": "longText"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "hyperlink",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Hyperlink",
+                  "inputType": "link",
+                  "titlePosition": "left",
+                  "linkType": "http",
+                  "linkAddress": "https://www.progress.com/",
+                  "linkText": "Hyperlink"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "image",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Image",
+                  "inputType": "image",
+                  "titlePosition": "left",
+                  "alignment": "left"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "dataList",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Data List",
+                  "inputType": "dataList",
+                  "wideFieldTitlePosition": "top",
+                  "dataBindingRelationParent": ""
+                }
+              ],
+              "name": "editableListForm",
+              "formType": "list"
+            },
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "textAreaField1",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Textarea field",
+                  "inputType": "textArea",
+                  "wideFieldTitlePosition": "top"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "heading1",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Heading",
+                  "inputType": "heading",
+                  "headingSize": "h1"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "dataList1",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Data List",
+                  "inputType": "dataList",
+                  "wideFieldTitlePosition": "top",
+                  "dataBindingRelationParent": ""
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "shortText1",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Short text",
+                  "inputType": "shortText"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "longText1",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Long text",
+                  "inputType": "longText"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "hyperlink1",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Hyperlink",
+                  "inputType": "link",
+                  "titlePosition": "left",
+                  "linkType": "http",
+                  "linkAddress": "https://www.progress.com/",
+                  "linkText": "Hyperlink"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "image1",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Image",
+                  "inputType": "image",
+                  "titlePosition": "left",
+                  "alignment": "left"
+                }
+              ],
+              "name": "editableListForm1",
+              "formType": "detail"
+            },
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "textField",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Text field",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ..."
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "textAreaField2",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Textarea field",
+                  "inputType": "textArea",
+                  "wideFieldTitlePosition": "top"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "dropdownlist",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Label",
+                  "inputType": "dropdownlist",
+                  "titlePosition": "left"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "checkbox",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Label",
+                  "inputType": "checkbox"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "date",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Date",
+                  "inputType": "date",
+                  "titlePosition": "left",
+                  "inputDateType": "date"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "group",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "My group",
+                  "inputType": "group-separator"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "radio",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Label",
+                  "inputType": "radio",
+                  "group": "group1"
+                }
+              ],
+              "name": "editableListForm2",
+              "formType": "add"
+            },
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "textField1",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Text field",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ..."
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "textAreaField3",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Textarea field",
+                  "inputType": "textArea",
+                  "wideFieldTitlePosition": "top"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "dropdownlist1",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Label",
+                  "inputType": "dropdownlist",
+                  "titlePosition": "left"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "fileUpload",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "File",
+                  "inputType": "fileUpload",
+                  "titlePosition": "left",
+                  "fileUploadPlaceholder": "Pick a file..."
+                }
+              ],
+              "name": "editableListForm3",
+              "formType": "edit"
+            }
+          ],
+          "name": "masterDetailViewModel",
+          "dataProvider": "jsonDataProvider",
+          "collection": "Activities",
+          "headerField": "Text",
+          "iconField": true,
+          "addItemForm": true,
+          "addScreenHeaderValue": "Create",
+          "editItemForm": true,
+          "editScreenHeaderSource": "dataBound",
+          "editScreenHeaderField": "Text",
+          "deleteItemButton": true,
+          "deleteItemConfirmation": true,
+          "pullToRefresh": true,
+          "endlessScroll": true,
+          "isMapView": false,
+          "serverSideSortingField": "CreatedAt",
+          "serverSideSortingDirection": "asc",
+          "serverSidePaging": true,
+          "serverSidePagingSize": 100,
+          "detailHeaderFieldSource": "dataBound",
+          "detailHeaderField": "Text"
+        }
+      ],
+      "title": "Master Detail",
+      "addToNavigation": true,
+      "icon": "organize"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "homeView",
+      "components": [],
+      "title": "Blank",
+      "addToNavigation": true,
+      "icon": "details"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "formView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:form",
+          "components": [
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "textField2",
+              "title": "Text field",
+              "inputType": "text",
+              "titlePosition": "left",
+              "inputTextType": "text",
+              "placeholder": "Type here ..."
+            },
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "dropdownlist2",
+              "title": "Label",
+              "inputType": "dropdownlist",
+              "titlePosition": "left"
+            },
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "date1",
+              "title": "Date",
+              "inputType": "date",
+              "titlePosition": "left",
+              "inputDateType": "date"
+            },
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "group1",
+              "title": "My group",
+              "inputType": "group-separator"
+            },
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "image2",
+              "title": "Image",
+              "inputType": "image",
+              "titlePosition": "left",
+              "alignment": "left"
+            },
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "heading2",
+              "title": "Heading",
+              "inputType": "heading",
+              "headingSize": "h1"
+            },
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "radio1",
+              "title": "Label",
+              "inputType": "radio",
+              "group": "group1"
+            },
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "checkbox1",
+              "title": "Label",
+              "inputType": "checkbox"
+            }
+          ],
+          "name": "formViewModel",
+          "submitButton": "Confirm",
+          "cancelButton": "Cancel"
+        }
+      ],
+      "title": "Form",
+      "addToNavigation": true,
+      "icon": "edit"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "authenticationView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:authentication",
+          "name": "authenticationViewModel",
+          "dataProvider": "frameworkSample",
+          "enableRegistration": true,
+          "gotoRegisterLabel": "Register",
+          "registerEmailLabel": "Email",
+          "registerPasswordLabel": "Password",
+          "registerNameLabel": "Name",
+          "registerLabel": "Register",
+          "registerRedirect": "home",
+          "gotoSigninLabel": "Sign In",
+          "enableLogout": false,
+          "enableRememberme": false,
+          "emailLabel": "Email",
+          "emailPlaceholder": "ex: john@gmail.com",
+          "passwordLabel": "Password",
+          "passwordPlaceholder": "Password must contain at least one uppercase character, at least one lower case character, at least one number. Password doesn't contain any special character.",
+          "signinLabel": "Sign In",
+          "signinRedirect": "home"
+        }
+      ],
+      "title": "Authentication",
+      "addToNavigation": true,
+      "icon": "contacts"
     }
   ],
-  "dataProviders": [],
+  "dataProviders": [
+    {
+      "type": "kendo-ui-mobile:dataProvider",
+      "name": "jsonDataProvider",
+      "title": "JSON Data Service",
+      "source": "json",
+      "url": "https://"
+    },
+    {
+      "type": "kendo-ui-mobile:dataProvider",
+      "name": "frameworkSample",
+      "title": "framework-sample / framework-sample",
+      "source": "everlive",
+      "everliveKey": "behgg4gi32e5zulr",
+      "offlineStorage": true
+    }
+  ],
   "name": "kendoUiMobileApp",
-  "navigation": "tabstrip",
+  "navigation": "drawer",
   "view": "home",
-  "transition": "slide",
-  "showMoreTab": true,
-  "skin": "nova",
-  "skinMainColor": "#32364c",
+  "skin": "flat",
+  "skinMainColor": "#1a1a1a",
   "skinTextColor": "#ffffff",
-  "skinAccentColor": "#ff4350"
+  "skinAccentColor": "#10c4b2"
 }

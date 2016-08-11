@@ -1,0 +1,78 @@
+<div data-role="view" data-title="Master Detail" data-layout="main" data-model="app.masterDetailView" data-show="app.masterDetailView.onShow" data-after-show="app.masterDetailView.afterShow">
+
+    <!-- START_CUSTOM_CODE_masterDetailView -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_masterDetailView -->
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+            <a data-role="backbutton" data-align="left" class="backButtonWrapper" style="display: none;">Back</a>
+            <span data-role="view-title"></span>
+
+            <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+
+
+            <a data-role="button" data-align="right" data-bind="events: { click: masterDetailViewModel.addClick }">Add</a>
+
+        </div>
+    </header>
+
+
+    <!--  Certain features like grouping and inset styling are not supported when endless scroll is enabled. -->
+
+    <ul class="masterDetailView" data-role="listview" data-auto-bind="false" data-style="" data-template="masterDetailViewModelTemplate" data-bind="source: masterDetailViewModel.dataSource, events: {click: masterDetailViewModel.itemClick}" data-pull-to-refresh="true"
+    data-endless-scroll="true">
+    </ul>
+
+
+    <!-- START_CUSTOM_CODE_masterDetailViewModel -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_masterDetailViewModel -->
+    <script type="text/x-kendo-template" id="masterDetailViewModelTemplate">
+        <div class="image-with-text">
+            # data = app.masterDetailView.masterDetailViewModel.fixHierarchicalData(data); #
+
+            <h3><span class="#: data.icon() #"></span>#: data['Text'] #</h3>
+
+        </div>
+        <label class="km-label-above">
+
+            <span>Textarea field</span>
+
+            <textarea rows="7"></textarea>
+        </label>
+        <h1></h1>
+        <div class="editableListItem">
+
+            <div>Short text</div>
+            <div></div>
+        </div>
+        <div>
+
+
+        </div>
+        <div class="editableListItem">
+
+            <div>Hyperlink</div>
+
+            <div>
+
+                <a href="\\#" onclick="app.openLink('https://www.progress.com/');" class="link">Hyperlink</a>
+
+            </div>
+        </div>
+        <div class="imageListItem">
+
+            <div>Image</div>
+
+            <div class="align-left">
+
+
+            </div>
+        </div>
+        <div name="dataList"><span>Data List</span>
+            <ul class="dataListField"></ul>
+        </div>
+    </script>
+</div>
